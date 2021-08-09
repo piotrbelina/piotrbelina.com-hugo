@@ -1,0 +1,100 @@
+baseURL = 'https://piotrbelina.com/'
+languageCode = 'en-us'
+title = 'Piotr Belina'
+theme = 'PaperMod'
+googleAnalytics = 'G-GGFFCFCRMB'
+
+enableRobotsTXT = true
+
+[languages.en]
+languageName = "English"
+weight = 1
+
+[[languages.en.menu.main]]
+name = "About"
+url = "about"
+weight = 1
+
+[[languages.en.menu.main]]
+name = "Archive"
+url = "archives"
+weight = 5
+
+[[languages.en.menu.main]]
+name = "Search"
+url = "search/"
+weight = 10
+
+[[languages.en.menu.main]]
+name = "Tags"
+url = "tags/"
+weight = 10
+
+[[languages.en.menu.main]]
+name = "Categories"
+url = "categories/"
+weight = 10
+
+[languages.pl]
+languageName = "Polski"
+languageAltTitle = "Polski"
+weight = 2
+#title = "PaperModL2"
+
+
+[[languages.pl.menu.main]]
+name = "O mnie"
+url = "o-mnie/"
+weight = 1
+
+[[languages.pl.menu.main]]
+name = "Archiwum"
+url = "archiwum/"
+weight = 5
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[params]
+  ShowCodeCopyButtons = true
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+
+  [params.homeInfoParams]
+  enabled = true
+  Title = "Piotr Belina"
+  imageUrl = "https://media-exp1.licdn.com/dms/image/C5103AQF3cVmOK4HykA/profile-displayphoto-shrink_200_200/0/1516463912609?e=1634169600&v=beta&t=T7NJAK3W49WGMgsgX_00BwmSmX7fkrPjIkp9U9DiPCs"
+  Content = """
+Welcome to my blog.
+- I live in Gdańsk, Poland
+- I am a Software Engineer & DevOps Engineer
+"""
+
+  [[params.profileMode.buttons]]
+    name = "Blog"
+    url = "blog"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/piotrbelina"
+
+  [[params.socialIcons]]
+  name = "linkedin"
+  url = "https://linkedin.com/in/piotrbelina"
+
+  [[params.socialIcons]]
+  name = "instagram"
+  url = "https://instagram.com/piotrbelina"
+
+  [params.assets]
+  disableHLJS = true
+
+#[params.analytics.google]
+#SiteVerificationTag = ""
+
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+lineNos = true
+style = "monokai"
+
