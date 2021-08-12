@@ -3,6 +3,8 @@ title: "#CloudGuruChallenge Multi-Cloud Madness: My Experience"
 date: 2021-01-31 11:11:39
 ShowToc: true
 type: "blog"
+aliases:
+  - "/cloudguru-multi-cloud-challenge/"
 ---
 
 This week I was working on [#CloudGuruChallenge Multi Cloud Madness](https://acloudguru.com/blog/engineering/cloudguruchallenge-multi-cloud-madness). I decided to challenge myself. I know AWS, I know GCP and I did not know Azure. I have not designed or implemented a multi-cloud solution yet. So it seemed a perfect opportunity to try something new.

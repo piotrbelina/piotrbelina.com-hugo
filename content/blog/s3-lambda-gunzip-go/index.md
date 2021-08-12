@@ -2,7 +2,8 @@
 title: "Gunzip S3 AWS Lambda in Go"
 date: 2021-04-14 20:00:00
 draft: false
-type: blog
+aliases:
+  - "/s3-lambda-gunzip-go/"
 ---
 You have a gzipped file in S3 and you want to gunzip it. Better yet it is gunzipped on S3 upload event. I could not find a solution, so I am publishing my own. This solution uses streaming with `io.Pipe` so, it does not have a trouble with Lambda `/tmp` disk space limit. 
 

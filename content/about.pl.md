@@ -16,7 +16,7 @@ DevOps Engineer | Software Engineer
 * **Kontenery**: Docker, Kubernetes, EKS, ECS
 * **Bazy danych**: MySQL, Aurora, DynamoDB, Memcached, Redis
 * **Infrastruktura jako kod**:  Terraform, Ansible, CloudFormation
-* **CI/CD**: Git, Gitlab, Github, Jenkins, CodePipeline, TDD, BDD
+* **CI/CD**: Git, Gitlab, Github, ArgoCD, Jenkins, CodePipeline, TDD, BDD
 * **OS** Linux, MacOS
 * **Web**: REST API, gRPC, Web Sockets
 * Jira / Confluence / Atlassian tools, Agile, Scrum, Kanban
