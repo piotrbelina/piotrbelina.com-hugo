@@ -5,7 +5,8 @@ cover:
   image: "aws-badges.png"
   alt: "Piotr Belina AWS Certifications Badges"
 ShowToc: true
-type: "blog"
+aliases:
+  - "/passing-aws-associate-certifications/"
 ---
 
 Hello, my name is Piotr Belina. I recently passed [three AWS Associate certifications](https://www.youracclaim.com/users/piotr-belina/badges):
