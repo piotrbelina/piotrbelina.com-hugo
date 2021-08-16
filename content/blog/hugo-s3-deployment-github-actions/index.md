@@ -1,7 +1,6 @@
 ---
 title: "Create S3 deployment pipeline for Hugo with GitHub Actions"
 date: 2021-08-16T10:16:14+02:00
-draft: true
 ShowToc: true
 cover:
   image: "hugo-s3-deployment-github-actions.png"
