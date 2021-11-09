@@ -48,6 +48,11 @@ url = "o-mnie/"
 weight = 1
 
 [[languages.pl.menu.main]]
+name = "Tagi"
+url = "tags/"
+weight = 10
+
+[[languages.pl.menu.main]]
 name = "Archiwum"
 url = "archiwum/"
 weight = 5
