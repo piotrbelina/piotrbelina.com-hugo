@@ -37,8 +37,9 @@ weight = 10
 
 [languages.pl]
 languageName = "Polski"
-languageAltTitle = "Polski"
 weight = 2
+[languages.pl.params]
+languageAltTitle = "Polski"
 #title = "PaperModL2"
 
 
