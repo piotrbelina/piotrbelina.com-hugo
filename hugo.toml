@@ -138,3 +138,8 @@ gzip = true
 [[deployment.matchers]]
 pattern = "^.+\\.(html|xml|json)$"
 gzip = true
+
+[privacy]
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
