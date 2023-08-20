@@ -65,6 +65,7 @@ home = [ "HTML", "RSS", "JSON" ]
   ShowCodeCopyButtons = true
   ShowReadingTime = true
   ShowPostNavLinks = true
+  hideFooter = true
 
   [params.homeInfoParams]
   enabled = true
