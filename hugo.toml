@@ -1,7 +1,7 @@
 baseURL = 'https://www.piotrbelina.com/'
 languageCode = 'en-us'
 title = 'Piotr Belina'
-theme = 'PaperMod'
+theme = 'PaperModX'
 googleAnalytics = 'G-GGFFCFCRMB'
 
 enableRobotsTXT = true
