@@ -128,7 +128,7 @@ To setup the pipeline we need to do two things:
 4. Add two secrets `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`
 5. The values you should grab from `terraform output aws_iam_deploy_secret ` from fields `id` and `secret`. 
 
-![GitHub Actions AWS secrets](./secrets.png)
+![GitHub Actions AWS secrets](secrets.png)
 
 ### Workflow file
 Now we should create file `.github/workflows/main.yml`  describing the pipeline. 
@@ -177,5 +177,5 @@ After you commit this file to the repository, the pipeline should start automati
 
 Also what I noticed, the Hugo deployment is way faster comparing to Gatsby (10 s vs 2 minutes). 
 
-![GitHub Actions Workflows](./workflows.png)
-![GitHub Actions S3 Hugo deployment](./deployment.png)
+![GitHub Actions Workflows](workflows.png)
+![GitHub Actions S3 Hugo deployment](deployment.png)

@@ -13,7 +13,7 @@ This week I was working on [#CloudGuruChallenge Multi Cloud Madness](https://acl
 
 ## Design
 
-![CloudGuruChallenge Solution Diagram](./CloudGuruChallege-Multi-Cloud-Madness.png)
+![CloudGuruChallenge Solution Diagram](CloudGuruChallege-Multi-Cloud-Madness.png)
 
 My solution uses 3 public cloud providers: AWS, Google Cloud and Azure. I described the infrastructure as a code using Terraform. 
 
@@ -43,13 +43,13 @@ I find it interesting to create a multi cloud solution from an engineering point
 ## Screenshots
 
 ### The website
-![CloudGuruChallenge Website](./aws-website.jpg)
+![CloudGuruChallenge Website](aws-website.jpg)
 
 ### Lambda dashboard
-![CloudGuruChallenge Lambda dashboard](./aws-lambda.png)
+![CloudGuruChallenge Lambda dashboard](aws-lambda.png)
 
 ### Google Cloud Vision API metrics
-![CloudGuruChallenge Google Cloud Vision API metrics](./gcp.png)
+![CloudGuruChallenge Google Cloud Vision API metrics](gcp.png)
 
 ### Azure Cosmos DB item
-![CloudGuruChallenge Azure Cosmos DB item](./azure-cosmos-db.png)
+![CloudGuruChallenge Azure Cosmos DB item](azure-cosmos-db.png)
