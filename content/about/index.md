@@ -2,6 +2,15 @@
 ShowReadingTime: false
 ---
 # 🚀 About
+
+
+## Contact
+<a href="mailto:me@piotrbelina.com">me@piotrbelina.com</a>
+
+![Piotr Belina](photo.jpg)
+
+<!-- {{< imgresize photo.jpg "350x350" "Alternate Text" >}} -->
+
 DevOps Engineer | Software Engineer
 
 ## Certifications
@@ -21,4 +30,5 @@ DevOps Engineer | Software Engineer
 
 # Positions
 * DevOps Engineer - AWS
+* Site Reliability Engineer
 * Golang Software Engineer
