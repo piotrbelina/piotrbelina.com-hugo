@@ -4,6 +4,12 @@ slug: o-mnie
 ---
 
 # 🚀 O mnie
+
+## Kontakt
+<a href="mailto:me@piotrbelina.com">me@piotrbelina.com</a>
+
+![Piotr Belina](photo.jpg)
+
 DevOps Engineer | Software Engineer
 
 ## Certyfikaty
@@ -23,4 +29,5 @@ DevOps Engineer | Software Engineer
 
 # Role
 * DevOps Engineer - AWS
+* Site Reliability Engineer
 * Golang Software Engineer
