@@ -1,6 +1,6 @@
 ---
 title: "Serving Static Website With Go"
-date: 2023-10-25T17:12:31+02:00
+date: 2023-10-25T15:12:31+02:00
 tags: ["go", "webdev"]
 ---
 
