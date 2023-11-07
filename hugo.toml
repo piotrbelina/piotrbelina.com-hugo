@@ -100,10 +100,11 @@ Welcome to my blog.
 #SiteVerificationTag = ""
 
 [markup.highlight]
+noClasses = false
 codeFences = true
-guessSyntax = true
+guessSyntax = false
 lineNos = true
-style = "monokai"
+#style = "github"
 
 [deployment]
 # By default, files are uploaded in an arbitrary order.
