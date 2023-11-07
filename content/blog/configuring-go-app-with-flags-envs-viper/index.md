@@ -125,6 +125,7 @@ func main() {
 	log.Printf("Listening on %s", addr)
 	log.Fatal(http.ListenAndServe(addr, nil))
 }
+```
 
 ```yaml
 // config/default.yaml
