@@ -1,6 +1,7 @@
 ---
 title: "Configuring Go application with flags, pflags, environment variables and Viper"
 date: 2023-11-06T18:40:25+01:00
+tags: ["go"]
 ---
 
 # 
