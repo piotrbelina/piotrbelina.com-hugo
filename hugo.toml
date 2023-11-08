@@ -75,6 +75,7 @@ home = [ "HTML", "RSS", "JSON" ]
 Welcome to my blog.
 - I live in Gdańsk, Poland
 - I am a Software Engineer & DevOps Engineer
+- I am specialising in Go, Kubernetes and AWS
 """
 
   [[params.profileMode.buttons]]
@@ -95,6 +96,12 @@ Welcome to my blog.
 
   [params.assets]
   disableHLJS = true
+
+#  [params.defaultCommentSystems]
+#    remark42 = true
+#  [params.commentSystems.remark42]
+#    url = "http://localhost:8080"
+#    site = "piotrbelina.com"
 
 #[params.analytics.google]
 #SiteVerificationTag = ""
