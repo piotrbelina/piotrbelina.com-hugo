@@ -1,3 +1,11 @@
-.chroma {
+/* .chroma {
   background-color: unset;
+} */
+
+.center {
+	text-align:center;
+}
+
+#comments-email {
+  margin-top: 1em;
 }
