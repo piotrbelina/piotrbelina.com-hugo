@@ -23,13 +23,15 @@ package main
 import (
 	"log"
 	"net/http"
+	"sync/atomic"
 	"time"
 )
 
-var ready bool
+// using sync/atomic to guarantee concurrency safety
+var ready atomic.Bool
 
 func main() {
-	ready = false
+	ready.Store(false)
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/health", healthHandler)
@@ -37,18 +39,18 @@ func main() {
 	go func() {
 		// connecting to db, cache, downstream services...
 		time.Sleep(time.Second * 5) // let's wait to simulate setting up the app
-		ready = true
+		ready.Store(true)
 	}()
 	log.Fatal(http.ListenAndServe(":8080", mux))
 }
 
 func healthHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("ok"))
+	w.Write([]byte("ok\n"))
 }
 
 func readyHandler(w http.ResponseWriter, r *http.Request) {
-	if ready {
+	if ready.Load() {
 		w.WriteHeader(http.StatusOK) // 200
 		w.Write([]byte("ok\n"))
 	} else {
