@@ -5,6 +5,8 @@ tags: ["go"]
 ---
 This is an code based on [opentelemetry dice example](https://github.com/open-telemetry/opentelemetry-go/tree/main/example/dice) which uses [rs/zerolog](https://github.com/rs/zerolog) and adds trace id to logs.
 
+Working code example can be found on [GitHub](https://github.com/piotrbelina/code-for-blog/tree/main/zerolog-traceid)
+
 ## TraceIDHandler
 This is a standard access logger. What is extra here is 
 
