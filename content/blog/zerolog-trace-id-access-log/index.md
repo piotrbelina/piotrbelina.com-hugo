@@ -1,7 +1,7 @@
 ---
 title: "Adding trace id to access log with rs/zerolog"
 date: 2024-03-25T21:38:08+01:00
-draft: false
+tags: ["go"]
 ---
 This is an code based on [opentelemetry dice example](https://github.com/open-telemetry/opentelemetry-go/tree/main/example/dice) which uses [rs/zerolog](https://github.com/rs/zerolog) and adds trace id to logs.
 
