@@ -4,11 +4,11 @@ date: 2024-04-05T23:52:05+02:00
 tags: ["go"]
 ---
 
-# 
-
 When working on local environment, it is useful to use trusted TLS certificates. For this purpose we can use [mkcert](https://github.com/FiloSottile/mkcert). 
 
 > mkcert automatically creates and installs a local CA in the system root store, and generates locally-trusted certificates.
+
+Working code example can be found on [GitHub](https://github.com/piotrbelina/code-for-blog/tree/main/mkcert-go-tls)
 
 ## Instalation
 
