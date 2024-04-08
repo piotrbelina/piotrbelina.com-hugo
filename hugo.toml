@@ -1,7 +1,7 @@
 baseURL = 'https://www.piotrbelina.com/'
 languageCode = 'en-us'
 title = 'Piotr Belina'
-theme = 'PaperModX'
+theme = 'PaperMod'
 googleAnalytics = 'G-GGFFCFCRMB'
 
 enableRobotsTXT = true
@@ -106,12 +106,6 @@ Welcome to my blog.
 #[params.analytics.google]
 #SiteVerificationTag = ""
 
-[markup.highlight]
-noClasses = false
-codeFences = true
-guessSyntax = false
-lineNos = true
-#style = "github"
 
 [deployment]
 # By default, files are uploaded in an arbitrary order.
