@@ -141,7 +141,8 @@ func main() {
     <-ctx.Done()
     log.Println("Got shutdown signal")
 
-    disableTraffic()
+    // disable traffic
+    ready.Store(false)
 
     // wait for kubernetes to deregister, duration has to be greater than healtcheck probe time
     time.Sleep(15 * time.Second)
