@@ -1,6 +1,7 @@
 ---
 title: "How Does Web Work With Go Part 1"
 date: 2024-09-13T23:31:30+02:00
+tags: ["go", "web"]
 ---
 
 This evening I was wondering if my 5-year old son would ask me, what is the Internet and how it works, what I would reply to him? Maybe he is a bit young to go into the details, but I would like to explain what I know about it and to structure my knowledge and learn more in the process. Because as Seneka said: while we teach, we learn. I would like to dive deep into the details in this series with some Go examples. Let's start then.
