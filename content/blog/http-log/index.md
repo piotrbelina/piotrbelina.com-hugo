@@ -6,7 +6,7 @@ tags: ["go", "slog"]
 
 I wanted to create a logging middleware for HTTP client.
 
-Working code example can be found on [GitHub](https://github.com/piotrbelina/code-for-blog/tree/main/http-logg)
+Working code example you can find on [GitHub](https://github.com/piotrbelina/code-for-blog/tree/main/http-log)
 
 The basic structure is 
 
