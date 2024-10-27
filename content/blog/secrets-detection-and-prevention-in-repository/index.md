@@ -1,6 +1,9 @@
 ---
 title: "Secrets Detection and Prevention in Repository"
 date: 2024-10-27T11:56:25+01:00
+cover:
+  image: "secrets-detection.jpg"
+  alt: "Secrets Detection and Prevention in Repository"
 ---
 
 I decided to make blog repository public to allow writing comments. In order to do it, I scanned my repo using two programs.
