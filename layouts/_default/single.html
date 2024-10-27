@@ -45,6 +45,11 @@
   {{- end }}
 
   <footer class="post-footer">
+    {{- if not (.Param "noComments") }}
+      <div class="comments-separator"></div>
+      {{- partial "comments.html" . }}
+    {{- end }}
+
     {{- if (.Param "socialLinks") }}
     {{- partial "social_links.html" . }}
     {{- end }}
@@ -68,11 +73,6 @@
       </div>
     {{- end }}
   </footer>
-
-  {{- if not (.Param "noComments") }}
-    <div class="comments-separator"></div>
-    {{- partial "comments.html" . }}
-  {{- end }}
 </article>
 
 {{- end }}{{/* end main */}}
