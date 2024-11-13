@@ -2,6 +2,9 @@
 title: "Measuring Elapsed Time in Go"
 date: 2024-10-29T13:10:07+01:00
 tags: ["go"]
+cover:
+  image: "measuring-elapsed-time-in-go.jpg"
+  alt: "Measuring Elapsed Time in Go"
 ---
 
 To measure elapsed time in Go you go use following code.
