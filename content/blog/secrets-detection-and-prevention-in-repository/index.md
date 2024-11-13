@@ -6,7 +6,7 @@ cover:
   alt: "Secrets Detection and Prevention in Repository"
 ---
 
-I decided to make blog repository public to allow writing comments. In order to do it, I scanned my repo using two programs.
+I decided to make the blog repository public to allow writing comments. To do it, I scanned my repo using two programs.
 
 ## detect-secrets
 [detect-secrets](https://github.com/Yelp/detect-secrets) detects secrets within a code base however, unlike other similar packages that solely focus on finding secrets, this package is designed with the enterprise client in mind: providing a **backwards compatible**, systematic means of:
@@ -73,7 +73,7 @@ gitleaks git -v
 ```
 ## Adding to pre-commit
 
-Using `pre-commit` is a great way to speed up find errors before doing the commit. 
+Using `pre-commit` is a great way to speed up finding errors before doing the commit. 
 
 ```yaml
 # .pre-commit-config.yaml
