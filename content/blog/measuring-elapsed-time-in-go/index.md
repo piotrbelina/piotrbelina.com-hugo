@@ -7,7 +7,7 @@ cover:
   alt: "Measuring Elapsed Time in Go"
 ---
 
-To measure elapsed time in Go you can use following code.
+To measure elapsed time in Go, you can use following code.
 
 ```go
 package main
