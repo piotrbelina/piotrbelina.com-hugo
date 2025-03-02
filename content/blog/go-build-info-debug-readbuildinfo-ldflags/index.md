@@ -112,15 +112,92 @@ type BuildSetting struct {
 
 ## Docker
 
-Unfortunately when building Docker image the "vcs" info is not available. In this case I find it is the easiest to pass build info as `ldflags`, which stands for `linker flags`. This way you can replace a string in the output binary.
+~~Unfortunately when building Docker image the "vcs" info is not available~~. 
+
+**Edit 2.03.2025** [thanks to @nsitbon comment](https://github.com/piotrbelina/piotrbelina.com-hugo/discussions/4#discussioncomment-12318158) I realized I missed that having debug info is possible when building container. 
+
+![@nsitbon comment](nsitbon.png)
+
+### copy .git directory to build-stage
+
+To have debug info, you need to copy .git directory to build stage.
+
+#### Dockerfile
+
+```Dockerfile
+FROM golang:1.23 AS build-stage
+
+WORKDIR /app
+
+COPY git-version-with-git-copy/go.mod ./git-version-with-git-copy/go.mod
+
+WORKDIR /app/git-version-with-git-copy
+
+RUN go mod download
+
+WORKDIR /app
+
+COPY . . # adds .git
+
+WORKDIR /app/git-version-with-git-copy
+
+RUN CGO_ENABLED=0 GOOS=linux go build -o /git-version
+
+FROM alpine
+
+WORKDIR /
+
+COPY --from=build-stage /git-version /git-version
+
+ENTRYPOINT ["/git-version"]
+```
+
+#### Container build
+
+```bash
+❯ docker build -f Dockerfile.gitversion -t git-version-with-git-copy . | pbcopy
+[+] Building 0.7s (17/17) FINISHED                                                                                                  docker:orbstack
+ => [internal] load build definition from Dockerfile.gitversion                                                                                0.0s
+ => => transferring dockerfile: 453B                                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/alpine:latest                                                                               0.5s
+ => [internal] load metadata for docker.io/library/golang:1.23                                                                                 0.5s
+ => [internal] load .dockerignore                                                                                                              0.0s
+ => => transferring context: 2B                                                                                                                0.0s
+ => [build-stage 1/9] FROM docker.io/library/golang:1.23@sha256:adfbe17b774398cb090ad257afd692f2b7e0e7aaa8ef0110a48f0a775e3964f4               0.0s
+ => [stage-1 1/3] FROM docker.io/library/alpine:latest@sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c                 0.0s
+ => [internal] load build context                                                                                                              0.0s
+ => => transferring context: 19.71kB                                                                                                           0.0s
+ => CACHED [build-stage 2/9] WORKDIR /app                                                                                                      0.0s
+ => CACHED [build-stage 3/9] COPY git-version-with-git-copy/go.mod ./git-version-with-git-copy/go.mod                                          0.0s
+ => CACHED [build-stage 4/9] WORKDIR /app/git-version-with-git-copy                                                                            0.0s
+ => CACHED [build-stage 5/9] RUN go mod download                                                                                               0.0s
+ => CACHED [build-stage 6/9] WORKDIR /app                                                                                                      0.0s
+ => CACHED [build-stage 7/9] COPY . .                                                                                                          0.0s
+ => CACHED [build-stage 8/9] WORKDIR /app/git-version-with-git-copy                                                                            0.0s
+ => CACHED [build-stage 9/9] RUN CGO_ENABLED=0 GOOS=linux go build -o /git-version                                                             0.0s
+ => CACHED [stage-1 2/3] COPY --from=build-stage /git-version /git-version                                                                     0.0s
+ => exporting to image                                                                                                                         0.0s
+ => => exporting layers                                                                                                                        0.0s
+ => => writing image sha256:675553a0a3eb38ae56480492e85c95493465276794463519637f6ea734a35971                                                   0.0s
+ => => naming to docker.io/library/git-version-with-git-copy                                                                                   0.0s
+```
+
+#### Run docker image
+```bash
+$ docker run git-version-with-git-copy
+time=2025-03-02T21:50:09.952Z level=INFO msg=hello revision=7caf1856a38e668eb1da50e3df18e0118e7965aa+CHANGES go_version=go1.23.6 build_date=2025-03-02T16:03:37
+```
+
+### Using ldflags
+In this case I find it is the easiest to pass build info as `ldflags`, which stands for `linker flags`. This way you can replace a string in the output binary.
 
 ```
-# this is output when you build docker image without passing ldflags
+# this is output when you build docker image without passing ldflags (without .git directory inside build stage)
 
 2024-09-26T18:08:01.843630710Z time=2024-09-26T18:08:01.843Z level=INFO msg=hello revision=NOCOMMIT go_version=go1.23.1 build_date=""
 ```
 
-### Dockerfile
+#### Dockerfile
 
 ```Dockerfile
 FROM golang:1.23 AS build-stage  
@@ -173,7 +250,7 @@ Sometimes it is not straightfoward to find this `importpath.name`.  You can run 
 ...
 ```
 
-### Makefile
+#### Makefile
 
 ```Makefile
 .PHONY: docker  
@@ -186,7 +263,7 @@ docker:
     docker build -f Dockerfile -t git-version --build-arg COMMIT=${GIT_COMMIT}${GIT_DIRTY} --build-arg BUILD_DATE=${BUILD_DATE} .
 ```
 
-### Build docker image
+#### Build docker image
 
 ```bash 
 $ make docker
@@ -214,7 +291,7 @@ docker build -f Dockerfile -t git-version --build-arg COMMIT=9dd90bdafb4123062f4
  => => naming to docker.io/library/git-version                                                                                             
 ```
 
-### Run docker image
+#### Run docker image
 
 ```bash
 $ docker run git-version
