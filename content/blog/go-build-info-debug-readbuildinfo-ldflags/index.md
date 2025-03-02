@@ -114,7 +114,7 @@ type BuildSetting struct {
 
 ~~Unfortunately when building Docker image the "vcs" info is not available~~. 
 
-**Edit 2.03.2025** [thanks to @nsitbon comment](https://github.com/piotrbelina/piotrbelina.com-hugo/discussions/4#discussioncomment-12318158) I realized I missed that having debug info is possible when building container. 
+**Edit 2.03.2025** [thanks to @nsitbon comment](https://github.com/piotrbelina/piotrbelina.com-hugo/discussions/4#discussioncomment-12318158) I realized I realized that having debug info is possible when building container. 
 
 ![@nsitbon comment](nsitbon.png)
 
