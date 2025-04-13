@@ -4,6 +4,7 @@ date: 2025-03-02T14:51:39+01:00
 cover:
   image: "uuid.jpg"
   alt: "Using UUID in Go with MySQL & Postgres Examples"
+tags: ["go", "mysql", "postgres"]
 ---
 
 A UUID is 128 bits long identifier and is intended to guarantee uniqueness across space and time. The format is described in [RFC 9562](https://datatracker.ietf.org/doc/html/rfc9562). The most common versions are:

@@ -11,24 +11,25 @@ ShowReadingTime: false
 
 <!-- {{< imgresize photo.jpg "350x350" "Alternate Text" >}} -->
 
-DevOps Engineer | Software Engineer
+SRE | Software Engineer
+
+## Tech stack
+* **Languagues**: [Go](/tags/go/), Python, JavaScript, PHP
+* **Monitoring**: [OpenTelemetry](/tags/opentelemetry/), Prometheus, NewRelic
+* **Containers**: Docker, [Kubernetes](/tags/kubernetes/), EKS, ECS
+* **Databases**: MySQL, Aurora, DynamoDB, Memcached, Redis
+* **IaC**:  [Terraform](/tags/terraform/), Ansible, CloudFormation
+* **CI/CD**: Git, Gitlab, Github, ArgoCD, TDD, BDD
+* **OS** Linux, MacOS
+* **Web**: REST API, gRPC, Web Sockets
+* Jira / Confluence / Atlassian tools, Agile, Scrum, Kanban
 
 ## Certifications
 * AWS Certified Solutions Architect – Associate
 * AWS Certified Developer – Associate
 * AWS Certified SysOps Administrator – Associate
 
-## Tech stack
-* **Languagues**: Golang, Go, Python, JavaScript, PHP
-* **Containers**: Docker, Kubernetes, EKS, ECS
-* **Databases**: MySQL, Aurora, DynamoDB, Memcached, Redis
-* **IaC**:  Terraform, Ansible, CloudFormation
-* **CI/CD**: Git, Gitlab, Github, ArgoCD, Jenkins, CodePipeline, TDD, BDD
-* **OS** Linux, MacOS
-* **Web**: REST API, gRPC, Web Sockets
-* Jira / Confluence / Atlassian tools, Agile, Scrum, Kanban
-
-# Positions
+## Positions
 * DevOps Engineer - AWS
 * Site Reliability Engineer
-* Golang Software Engineer
+* Software Engineer
