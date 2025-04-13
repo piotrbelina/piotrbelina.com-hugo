@@ -75,7 +75,7 @@ home = [ "HTML", "RSS", "JSON" ]
 Welcome to my blog.
 - I live in Gdańsk, Poland
 - I am a Software Engineer & Site Reliability Engineer
-- I am specialising in Go, OpentTelemety, Kubernetes and AWS
+- I am specialising in Go, OpenTelemetry, Kubernetes and AWS
 """
 
   [[params.profileMode.buttons]]
