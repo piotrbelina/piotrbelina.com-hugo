@@ -7,7 +7,7 @@ cover:
   alt: "golangci-lint"
 ---
 
-Linter is a static code analysis tool. It is used to mark programming errors and style errors. The tool I am using to check my Go code is [golangci-lint](https://golangci-lint.run/) which is a fast linters runner. It contains a large collection of various linters and a lot of configuration options.
+Linter is a static code analysis tool that detects programming and style errors. I use [golangci-lint](https://golangci-lint.run/), a fast linter runner, to check my Go code.  which is a fast linters runner. It contains an extensive collection of various linters and many configuration options.
 
 ## Installation
 
@@ -76,7 +76,7 @@ main.go:10:2: use of `fmt.Printf` forbidden by pattern `^(fmt\.Print(|f|ln)|prin
 * forbidigo: 1
 ```
 
-You have two error messages, let’s fix it.
+You have two error messages, so let's fix them.
 
 ### Fixing error checking
 
@@ -150,7 +150,7 @@ $ echo $?
 
 ## Linter workflow integration
 
-The linter should be integrated into the workflow so it is not necessary to run each time the command manually. `golangci-lint` integrates with the most [popular editors like](https://golangci-lint.run/welcome/integrations/):
+You can integrate linters into the workflow, so running the command manually in the terminal after every code change is unnecessary. `golangci-lint` integrates with the most [popular editors like](https://golangci-lint.run/welcome/integrations/):
 - Goland
 - VSCode
 - Vim
